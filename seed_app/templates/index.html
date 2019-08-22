@@ -11,8 +11,10 @@
     <title>SeedQualityTester</title>
   </head>
   <body>
-      <img style="position: absolute; padding: 8px 10px 0 0; width: 85px; height:85px; display: block; left: 90%; top: 1%; z-index: 1;" src="https://res.cloudinary.com/jabeenstha/image/upload/v1561002772/sqa_oza4ke.png">
+    <div class = "container">
+      
       <div class="header-bar-warp d-flex">
+
         <h3 style='color: white; font-family: Pacifico, cursive;font-size:26px;'><a style="color: white;" href="{% url 'seed_app:index' %}">Seed Quality Tester</a></h3>
         
         <nav class="top-nav-area w-75">
@@ -25,13 +27,20 @@
             <li><a href="{% url 'seed_app:aboutus' %}"><strong>About Us</strong></a></li>
             
           </ul>
+          <img
+            style="position: absolute; padding: 8px 10px 0 0; width: 85px; height:85px; display: block; left: 77%; top: 1%; z-index: 1;"
+            src="https://res.cloudinary.com/jabeenstha/image/upload/v1561002772/sqa_oza4ke.png">
         </nav>
         
         
       </div>
-      
+    </div>
+
     
      <br><br><br>
+     <br><br>
+     <br>
+     <br>
       <div class="container">
           <form method="post" id="fileform" enctype="multipart/form-data">
             {% csrf_token %} 
@@ -44,37 +53,27 @@
               <br><br>
            </div>
            <br>
-           <div class="container">
-              <div class="row">
-                <div class="col-sm-5">
-                    
-                </div>
+          <div class="file-upload-button">
                 
-                <div class="col-sm-4">
+               
                     <button id="sub" class="btn btn-primary btn-lg" type="submit">Test Quality</button>
+                
                 </div>
-                 
-              </div>
-           </div>
-           
           </form>
       </div>
       <br>
       
       <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-
-            </div>
-            <div class="col-md-4">
+        <div class ="file-upload-button">
+            
                 {% if file_url %}
-                <h1 id='filename'><strong>{{ result }}</strong></h1>
+                <h2 id='filename'><strong>{{ result }}</strong></h2>
                   <img src={{ file_url }}>
                   {% else %}
                   <br>
-                    <h1 style="color:white;">No Preview</h1>
+                    <h2 style="color:white;">No Preview</h2>
                 {% endif %}
-            </div>
+            
         </div>
        
         </div>

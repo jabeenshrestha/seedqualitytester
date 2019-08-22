@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.urls import reverse
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
@@ -9,6 +9,7 @@ import numpy as np
 import tensorflow as tf
 from keras.models import load_model
 import keras.backend as K
+
 # Create your views here.
 
 out_dict = {'Average': 0,
@@ -44,7 +45,7 @@ def index(request):
                 result = li[index]
                 return render(request, "index.html", {
                                  'result': result, 'file_url': file_url })
-
+        
     return render(request, "index.html")
 
 

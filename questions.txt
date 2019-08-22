@@ -1,0 +1,12 @@
+The questions regarding our project are:
+1) Some of the output categories are not predicted accurately; so how can we modify our CNN architecture so as to increase the accuracy ?
+2) We have tried implementing the CNN model as protobuf (.pb) file in android, everything worked fine but could't locate the error; so how can we implement this model in android?
+Chat Conversation End
+Type a message...
+
+difference in farmer use and use of app?
+
+object detection
+comparision with humans
+
+
